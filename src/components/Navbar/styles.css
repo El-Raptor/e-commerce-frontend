@@ -22,8 +22,10 @@
   height: 100%;
 }
 
-.nav-btn {
+.nav-link {
   color: white;
+  display: flex;
+  align-items: center;
   height: 100%; 
   border: none;
   cursor: pointer;
@@ -35,12 +37,12 @@
   transition: all 0.3s ease;
 }
 
-.nav-btn:hover {
+.nav-link:hover {
   background-color: #1E40AF;
   border-bottom: #10B981 5px solid;
 }
 
-.nav-btn:active {
+.nav-link:active {
   transform: translateY(0);
 }
 
