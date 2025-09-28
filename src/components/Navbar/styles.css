@@ -1,0 +1,132 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #261186;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 60px;
+}
+
+.navbar-left {
+  display: flex;
+  height: 100%;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+}
+
+.nav-btn {
+  color: white;
+  height: 100%; 
+  border: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #1E40AF;
+  border-bottom: #10B981 5px solid;
+}
+
+.nav-btn:active {
+  transform: translateY(0);
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin: 5px 0px;
+  border-radius: 20px;
+  padding: 0.25rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 0.75rem 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  background: transparent;
+  min-width: 200px;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-btn {
+  background-color: #2563EB;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-btn:hover {
+  background-color: #1E40AF;
+  transform: scale(1.05);
+}
+
+.cart-btn {
+  background-color: #2563EB;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin-right: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-btn:hover {
+  background-color: #1E40AF;
+  transform: translateY(-2px);
+}
+
+.cart-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .navbar-left,
+  .navbar-right {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .search-input {
+    min-width: 150px;
+  }
+}
