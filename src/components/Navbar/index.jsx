@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./styles.css";
 
 const Navbar = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const location = useLocation();
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -14,19 +16,25 @@ const Navbar = () => {
     console.log("Navegando para Cart");
   };
 
+  const isActive = (path) => {
+    return location.pathname === path;
+  }
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <button 
-          className="nav-btn"
+        <Link 
+          to="/" 
+          className={`nav-link ${isActive("/") ? "active" : ""}`}
         >
           Home
-        </button>
-        <button 
-          className="nav-btn"
+        </Link>
+        <Link 
+          to="/add-product" 
+          className={`nav-link ${isActive("/add-product") ? "active" : ""}`}
         >
           Add Product
-        </button>
+        </Link>
       </div>
 
       <div className="navbar-right">
